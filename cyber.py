@@ -1,11 +1,12 @@
+import os
 
 from serpapi import GoogleSearch
 import csv
-api_key = "9c135c7a24855570d8a719b68875b2b890c1e0f935ab3ee2970158b52e6615a3"
+API_KEY = os.getenv("api_key");
 params = {
     "q": "site:.bd",  # Replace with your query
     "engine": "google",
-    "api_key": api_key  # Replace with your API key
+    "api_key": API_KEY  # Replace with your API key
 }
 
 search = GoogleSearch(params)
